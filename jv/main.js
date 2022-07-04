@@ -1,8 +1,23 @@
-let nombre = prompt("Ingrese su nombre");
+let cuentas = []
 
-let apellido = prompt("Ingrese su apellido");
+cuentas[1] = 100
 
-let salida = (nombre +' ' + apellido + " es tu nombre");
+cuentas[2] = 150
 
+cuentas[3] = 300
 
-alert(salida);
+for (let i = 1; i < (cuentas.length); i++) {
+    console.log(`El saldo en sus cuenta ${i} es de ${cuentas[i]}`)
+}
+
+const usarCuenta = prompt('¿Que cuenta desea utilizar? cuenta 1, cuenta 2, cuenta 3')
+
+console.log(parseInt(usarCuenta))
+
+const monto = parseInt(prompt('Cuanto va a pagar?'))
+
+if (cuentas[usarCuenta] > monto) {
+    console.log('pagado')
+} else {
+    console.log('dinero insuficiente')
+}

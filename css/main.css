@@ -2,29 +2,5 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
 }
 
-.header .nav{
-    background-color: #3263d1;
-}
-
-.header .nav .logo img{
-    height: 90px;
-    width: 90px;
-    margin-left: 40px;
-}
-
-.header .nav .nav-ul a{
-    text-decoration: none;
-    color:antiquewhite;
-    padding-left: 10px;
-    font-size: 20px;
-}
-
-.header .nav .contacto{
-    text-decoration: none;
-    color: antiquewhite;
-    margin-right: 100px;
-    font-size: 20px;
-}
