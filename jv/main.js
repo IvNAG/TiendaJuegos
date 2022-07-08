@@ -21,3 +21,10 @@ if (cuentas[usarCuenta] > monto) {
 } else {
     console.log('dinero insuficiente')
 }
+
+function solicitarNombre() {
+    let nombreIngresado = prompt("Ingrese su nombre")
+    alert("El nombre ingresado es " + nombreIngresado)
+}
+
+solicitarNombre()
