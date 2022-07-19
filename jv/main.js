@@ -1,30 +1,65 @@
-let cuentas = []
+let productos = [
+    {
+        title:'God of War Ragnarok',
+        price:10000,
+        stock:3,
+    },
+    {
+        title:'Call of Duty MODERN WARFARE® II',
+        price:12000,
+        stock:5,
+    },
+    {
+        title:'Elden Ring',
+        price:8000,
+        stock: 0,
+    },
+    {
+        title:'Spider-Man: Remastered',
+        price:11000,
+        stock:1,
+    },
+]
 
-cuentas[1] = 100
+const amount = parseInt(prompt('¿Cuanto dinero tiene?'))
+const game = parseInt(prompt('1_God of War Ragnarok, 2_ Call of Duty MODERN WARFARE® II, 3_Elden Ring, 4_Spider-Man: Remastered'))
 
-cuentas[2] = 150
 
-cuentas[3] = 300
-
-for (let i = 1; i < (cuentas.length); i++) {
-    console.log(`El saldo en sus cuenta ${i} es de ${cuentas[i]}`)
+function comprobar (producto) {
+    if (producto.price <= amount) {
+        if (producto.stock !== 0) {
+            alert('El dinero restante es ' + (amount - producto.price))
+        } else {
+            alert('No hay stock de este videojuego.')
+        }
+    } else {
+        alert('Pago rechazado.')
+    }
 }
 
-const usarCuenta = prompt('¿Que cuenta desea utilizar? cuenta 1, cuenta 2, cuenta 3')
 
-console.log(parseInt(usarCuenta))
-
-const monto = parseInt(prompt('Cuanto va a pagar?'))
-
-if (cuentas[usarCuenta] > monto) {
-    console.log('pagado')
-} else {
-    console.log('dinero insuficiente')
+function seleccionar (game) {
+    switch (game) {
+        case 1:
+            comprobar(productos[0])
+            break;
+        case 2:
+            comprobar(productos[1])
+            break;
+        case 3: 
+            comprobar(productos[2])
+            break
+        case 4:
+            comprobar(productos[3])
+            break;
+    }
 }
 
-function solicitarNombre() {
-    let nombreIngresado = prompt("Ingrese su nombre")
-    alert("El nombre ingresado es " + nombreIngresado)
+
+seleccionar(game)
+function ordenarPrecio (obj) {
+    let arr = obj.sort((a,b) => a.price  - b.price)
+    console.log(arr)
 }
 
-solicitarNombre()
+ordenarPrecio(productos)
