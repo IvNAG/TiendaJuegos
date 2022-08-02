@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container-navbar{
+    background-color: rgba(14, 10, 10, 0.541) 
+}
 
-.heroe{
-    background-color: rgba(148, 149, 148, 0.333);
+footer{
+    background-color: rgb(14, 10, 10) 
 }
