@@ -1,3 +1,7 @@
+const carrito = JSON.parse(localStorage.getItem('carrito')) ?? [];
+document.getElementById("cart-total").innerHTML = carrito.length;
+
+
 let productos = [
     {id:1, title:"God of War Ragnarok", price: 1000, stock: 3, img: "https://gamestorecuador.com/files/images/productos/1655484530-god-of-war-ragnarok-ps5-pre-orden-0.jpg",},
     {id:2, title:"Elden Ring", price: 1000, stock: 2, img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/910/199/products/eldenring11-5c93145ed747e47dfe16451397874446-640-0.jpg",},
@@ -10,29 +14,33 @@ let productos = [
     ];
 
 
-productos.forEach((producto) =>{
-    const idButton =`add-cart${producto.id}`
-    document.getElementById("seccion-card").innerHTML += `<div class="col mb-5">
-    <div class="card h-100">
-        <img class="card-img-top" src="${producto.img}" alt="..." />
-        <div class="card-body p-4">
-            <div class="text-center">
-                <h5 class="fw-bolder">${producto.title}</h5>
-                <div class="precio">
-                    <p>${producto.price}</p>
-                </div>    
-            </div>
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}` 
+    document.getElementById("seccion-card").innerHTML += `<div class="card">
+        <div class="precio">
+            <p>$${producto.price}</p>
         </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="${idButton}" href="#">Añadir al carrito</a></div>
-        </div>
-    </div>`;    
-});
+        <img src="${producto.img}">
+        <h4>${producto.title}</h4>
+        <a class="boton" id="${idButton}" data-id="${producto.id}">Añadir Al Carrito</a>
+        <a class="boton" onclick="verProducto(${producto.id})">Ver producto</a>
+    </div>`;
+})
+
+function verProducto(id){
+    const indiceProducto = productos.findIndex((producto) => producto.id === id);
+    localStorage.setItem('verProducto', JSON.stringify(productos[indiceProducto]));
+    location.href = "producto.html";
+}
 
 productos.forEach((producto) =>{
     const idButton =`add-cart${producto.id}`
     document.getElementById(idButton).addEventListener(`click`, () =>{
-        console.log(producto.title + " fue "+"Agregado al carrito con exito :).");
+        carrito.push(producto);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        const total =carrito.reduce((acumulador , producto) => acumulador + producto.price, 0);
+        document.getElementById("cart-total").innerHTML = `${carrito.length} - $${total}`;
     })
 });
+
 
