@@ -22,10 +22,29 @@ productos.forEach((producto) => {
         </div>
         <img src="${producto.img}">
         <h4>${producto.title}</h4>
-        <a class="boton" id="${idButton}" data-id="${producto.id}">Añadir Al Carrito</a>
-        <a class="boton" onclick="verProducto(${producto.id})">Ver producto</a>
+        <a class="btnadd" id="${idButton}" data-id="${producto.id}" onclick="myFunction()" >Añadir Al Carrito</a>
+        <a class="btnview" onclick="verProducto(${producto.id})">Ver producto</a>
     </div>`;
 })
+
+const myFunction = () => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Se ha añadido al carrito de compras.'
+      })
+}
 
 function verProducto(id){
     const indiceProducto = productos.findIndex((producto) => producto.id === id);
@@ -41,6 +60,9 @@ productos.forEach((producto) =>{
         const total =carrito.reduce((acumulador , producto) => acumulador + producto.price, 0);
         document.getElementById("cart-total").innerHTML = `${carrito.length} - $${total}`;
     })
-});
+})
+
+
+
 
 
