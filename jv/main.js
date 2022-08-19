@@ -1,7 +1,7 @@
 const carrito = JSON.parse(localStorage.getItem('carrito')) ?? [];
 document.getElementById("cart-total").innerHTML = carrito.length;
 
-
+//----------------------------PRODUCTOS-------------------/
 let productos = [
     {id:1, title:"God of War Ragnarok", price: 1000, stock: 3, img: "https://gamestorecuador.com/files/images/productos/1655484530-god-of-war-ragnarok-ps5-pre-orden-0.jpg",},
     {id:2, title:"Elden Ring", price: 1000, stock: 2, img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/910/199/products/eldenring11-5c93145ed747e47dfe16451397874446-640-0.jpg",},
@@ -13,7 +13,7 @@ let productos = [
     {id:8, title:"Fifa 23", price: 500, stock: 4, img: "https://sm.ign.com/ign_es/screenshot/default/image003_ksqr.png",},
     ];
 
-
+//-----------------------CARDS-DE-PRODUCTOS-------------------//
 productos.forEach((producto) => {
     const idButton = `add-cart${producto.id}` 
     document.getElementById("seccion-card").innerHTML += `<div class="card">
@@ -26,7 +26,7 @@ productos.forEach((producto) => {
         <a class="btnview" onclick="verProducto(${producto.id})">Ver producto</a>
     </div>`;
 })
-
+//-------------------SWEETALERT-AGREGAR-AL-CARRITO---------------//
 const myFunction = () => {
     const Toast = Swal.mixin({
         toast: true,
@@ -45,13 +45,14 @@ const myFunction = () => {
         title: 'Se ha añadido al carrito de compras.'
       })
 }
-
+// ----------------VER-PRODUCTO----------------------//
 function verProducto(id){
     const indiceProducto = productos.findIndex((producto) => producto.id === id);
     localStorage.setItem('verProducto', JSON.stringify(productos[indiceProducto]));
     location.href = "producto.html";
 }
 
+//-------------------------ACUMULADOR-DEL-CARRITO-NAV--------------------------//
 productos.forEach((producto) =>{
     const idButton =`add-cart${producto.id}`
     document.getElementById(idButton).addEventListener(`click`, () =>{
@@ -60,7 +61,7 @@ productos.forEach((producto) =>{
         const total =carrito.reduce((acumulador , producto) => acumulador + producto.price, 0);
         document.getElementById("cart-total").innerHTML = `${carrito.length} - $${total}`;
     })
-})
+});
 
 
 
