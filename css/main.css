@@ -39,9 +39,9 @@ body::-webkit-scrollbar-thumb {
 .header {
     position: sticky;
     top: 0;
-    height: 10rem;
+    height: 13rem;
     background: url('../img/back1.jpg') no-repeat center/cover;
-    background-position: 0 51%;
+    background-position: 0 65%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -315,7 +315,7 @@ body::-webkit-scrollbar-thumb {
 
 /* PRODUCTS */
 .main-container {
-    background: url('../img/back2.jpg') no-repeat center/cover;
+    background: rgb(24, 24, 24) no-repeat center/cover;
 }
 
 .filter {
@@ -403,6 +403,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
     font-size: 1.1rem;
     transition: .1s;
+    color: #e6e5eb;
 }
 
 .card-btn-buy:hover {
@@ -480,7 +481,7 @@ body::-webkit-scrollbar-thumb {
 
 /* CHECKOUT */
 .checkout-container {
-    background: url('../img/thanks.jpg') no-repeat center/cover;
+    background: url('../img/thanks.png') no-repeat center/cover;
     background-color: #ffcc00;
     width: 100%;
     min-height: 100vh;
@@ -497,39 +498,16 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
 }
 
-.checkout-thanks {
-    font-family: sp-font;
-    font-size: 2rem;
-    color: #1d1d1c;
-}
-
-/* SORETES */
-@keyframes mrHankey {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-.mr-hankey {
-    position: absolute;
-    width: 5rem;
-    transform: translateY(-100%);
-    animation: mrHankey 1s linear;
-}
-
 /* BUTTON BACK TO HOME */
 .back-to-home {
-    background-color: #cea500;
+    background-color: #7d3334;
     padding: .6rem 1rem;
     border: none;
     border-radius: 15px;
     font-size: 1.1rem;
     transition: .3s;
     z-index: 20;
+    margin: 600px 0px 0px 1100px;
 }
 
 .back-to-home:hover {
@@ -544,6 +522,14 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footerh3{
+    color: white;
+}
+
+.githubimg{
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 480px) {

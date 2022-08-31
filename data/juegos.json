@@ -3,13 +3,13 @@
         "id": 1,
         "name": "God of War Ragnarok",
         "img": "./img/godofwar.png",
-        "price": 60
+        "price": 59.99
     },
     {
         "id": 2,
         "name": "Stray",
         "img": "./img/stray.jpg",
-        "price": 60
+        "price": 59.99
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "id": 4,
         "name": "Resident Evil Village",
         "img": "./img/resident.png",
-        "price": 39
+        "price": 40
     },
     {
         "id": 5,
@@ -39,7 +39,7 @@
         "id": 7,
         "name": "The Last Of Us II",
         "img": "./img/thelastofus.png",
-        "price": 60
+        "price": 59.99
     },
     {
         "id": 8,
@@ -57,7 +57,7 @@
         "id": 10,
         "name": "Fall Guys",
         "img": "./img/fallguys.png",
-        "price": 10
+        "price": 9.99
     },
     {
         "id": 11,
@@ -68,20 +68,20 @@
     {
         "id": 12,
         "name": "Spiderman",
-        "img": "./img/spiderman.webp",
+        "img": "./img/spiderman.png",
         "price": 35
     },
     {
         "id": 13,
         "name": "Fifa 23",
         "img": "./img/fifa23.png",
-        "price": 69
+        "price": 59.99
     },
     {
         "id": 14,
         "name": "Nba 2k23",
         "img": "./img/nba2k23.png",
-        "price": 69
+        "price": 59.99
     },
     {
         "id": 15,
@@ -103,8 +103,8 @@
     },
     {
         "id":18,
-        "name":"NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
-        "img":"./img/storm4.jpg",
+        "name":"NARUTO SHIPPUDEN:STORM 4",
+        "img":"./img/storm4.png",
         "price":60
     },
     {
@@ -116,7 +116,7 @@
     {
         "id":20,
         "name":"Far Cry 6",
-        "img":"./img/farcry6.webp",
+        "img":"./img/farcry6.png",
         "price":60
     }
 ]

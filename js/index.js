@@ -224,7 +224,6 @@ const checkout = e => {
         document.body.innerHTML = `
             <div class="checkout-container">
                 <div class="checkout">
-                    <h2 class="checkout-thanks">Gracias por tu compra</h2>
                     <button class="back-to-home">VOLVER</button>
                 </div>
             </div>
