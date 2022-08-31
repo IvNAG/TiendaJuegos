@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Videojuegos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Proyecto Final de JS.</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-navbar container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Tienda IvNAG</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
-                        <i class="bi-cart-fill me-1"></i>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-total" >0</span>
-                    </button>
-                </form>
-            </div>
+
+<body class="body">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- ICON CART -->
+        <div id="icon-cart-container" class="icon-cart-container">
+            <img src="./img/carro.png" id="icon-cart" class="icon-cart" alt="towelie">
+            <p class="icon-cart-quantity"></p>
         </div>
-    </nav>
-    <header class="bg-white py-5">
-        <div class="container my-5">
-            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                    <h1 class="display-4 fw-bold lh-1">Bienvenido a la mejor pagina para comprar tus juegos favoritos.</h1>
-                    <p class="lead">Aqui encontraras tus juegos favoritos al mejor precio del mercado.Tambien podras reservar los proximos juegos que saldran al mercado, encontraras ediciones especiales de los juegos mas vendidos.</p>
-                    <div class= "d-flex justify-content-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Ver Productos</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
-                </div>
-            </div>
-        </div>
+
+        <!-- CART -->
+        <aside id="cart" class="cart"></aside>
     </header>
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div id="seccion-card" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            </div>
-        </div>
-    </section>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="text-muted">© 2022 Company, Inc</span>
-        </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="."></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
+
+    <!-- PRODUCTS -->
+    <div class="main-container">
+        <aside class="filter">
+            <input type="search" id="input-search" placeholder="Buscar producto..">
+        </aside>
+        <main id="main" class="main"></main>
+        <footer class="container-load-more">
+            <button id="btn-load-more" class="btn-load-more">VER MAS</button>
+        </footer>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+        <h3>Proyecto Final - Ivan Nicolas Arce - JS</h2>
+        <a href="https://github.com/IvNAG/TiendaJuegos"><img src="./img/github.png" alt="" height="30px" width="30px"></a>
     </footer>
+
+    <!-- SCRIPT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./jv/main.js"></script>
-    <script src="./jv/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
