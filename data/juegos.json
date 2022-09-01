@@ -1,122 +1,122 @@
 [
     {
         "id": 1,
-        "name": "God of War Ragnarok",
+        "name": "GOD OF WAR RAGNAROK",
         "img": "./img/godofwar.png",
         "price": 59.99
     },
     {
         "id": 2,
-        "name": "Stray",
+        "name": "STRAY",
         "img": "./img/stray.jpg",
         "price": 59.99
     },
     {
         "id": 3,
-        "name": "Uncharted",
+        "name": "UNCHARTED",
         "img": "./img/uncharted.png",
-        "price": 20
+        "price": 20.00
     },
     {
         "id": 4,
-        "name": "Resident Evil Village",
+        "name": "RESIDENT EVIL VILLAGE",
         "img": "./img/resident.png",
-        "price": 40
+        "price": 40.00
     },
     {
         "id": 5,
-        "name": "Minecraft",
+        "name": "MINECRAFT",
         "img": "./img/minecraft.png",
-        "price": 15
+        "price": 15.00
     },
     {
         "id": 6,
-        "name": "Need For Speed Heat",
+        "name": "NEED FOR SPEED HEAT",
         "img": "./img/needforspeed.png",
-        "price": 20
+        "price": 20.00
     },
     {
         "id": 7,
-        "name": "The Last Of Us II",
+        "name": "THE LAST OF US II",
         "img": "./img/thelastofus.png",
         "price": 59.99
     },
     {
         "id": 8,
-        "name": "Grand Theft Auto V",
+        "name": "GRAND THEFT AUTO V",
         "img": "./img/gtaV.png",
-        "price": 15
+        "price": 15.00
     },
     {
         "id": 9,
-        "name": "Terraria",
+        "name": "TERRARIA",
         "img": "./img/terraria.png",
-        "price": 5
+        "price": 5.00
     },
     {
         "id": 10,
-        "name": "Fall Guys",
+        "name": "FALL GUYS",
         "img": "./img/fallguys.png",
         "price": 9.99
     },
     {
         "id": 11,
-        "name": "Dead By Daylight",
+        "name": "DEAD BY DAYLIGHT",
         "img": "./img/dbd.png",
-        "price": 16
+        "price": 16.00
     },
     {
         "id": 12,
-        "name": "Spiderman",
+        "name": "SPIDERMAN",
         "img": "./img/spiderman.png",
-        "price": 35
+        "price": 35.00
     },
     {
         "id": 13,
-        "name": "Fifa 23",
+        "name": "FIFA 23",
         "img": "./img/fifa23.png",
         "price": 59.99
     },
     {
         "id": 14,
-        "name": "Nba 2k23",
+        "name": "NBA 2K23",
         "img": "./img/nba2k23.png",
         "price": 59.99
     },
     {
         "id": 15,
-        "name": "Dead Island",
+        "name": "DEAD ISLAND",
         "img": "./img/deadisland.png",
-        "price": 8
+        "price": 8.00
     },
     {
         "id": 16,
         "name": "DRAGON BALL FIGHTERZ",
         "img": "./img/dbfighterz.png",
-        "price": 10
+        "price": 10.00
     },
     {
         "id":17,
-        "name":"Dragon Ball Kakarot",
+        "name":"DRAGON BALL KAKAROT",
         "img":"./img/dragonballkakarot.png",
-        "price":18
+        "price":18.00
     },
     {
         "id":18,
-        "name":"NARUTO SHIPPUDEN:STORM 4",
+        "name":"NARUTO SHIPPUDEN : STORM 4",
         "img":"./img/storm4.png",
-        "price":60
+        "price":60.00
     },
     {
         "id":19,
-        "name":"Mafia 3",
+        "name":"MAFIA 3",
         "img":"./img/mafia3.jpg",
-        "price":10
+        "price":10.00
     },
     {
         "id":20,
-        "name":"Far Cry 6",
+        "name":"FAR CRY 6",
         "img":"./img/farcry6.png",
-        "price":60
+        "price":60.00
     }
 ]
